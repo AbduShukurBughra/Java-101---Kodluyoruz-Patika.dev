@@ -28,12 +28,12 @@ public class DaireAlanCevre {
 
         // Daire diliminin alanını bulma ÖDEV
         // Değişkenler tanımlandı ve veri girişi için scanner kodu kullanıldı.
-        double merkezAcı, daireDilimAlan;
+        double merkezAci, daireDilimAlan;
         System.out.print("Dairenin merkez açısını giriniz : ");
-        merkezAcı = input.nextDouble();
+        merkezAci = input.nextDouble();
 
         // Daire diliminin alanı hesaplanarak ekrana yazdırıldı.
-        daireDilimAlan=(pi*(r * r)*merkezAcı)/360;
-        System.out.println("Daire diliminin alanı : " + daireDilimAlan + "cm\u00B2");
+        daireDilimAlan=(pi*(r * r)*merkezAci)/360;
+        System.out.println("Daire diliminin alani : " + daireDilimAlan + "cm\u00B2");
     }
 }
