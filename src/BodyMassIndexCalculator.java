@@ -17,3 +17,4 @@ public class BodyMassIndexCalculator {
         System.out.println("Vücut Kitle İndeksiniz : " + bodyMassIndex );
     }
 }
+
