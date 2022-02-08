@@ -27,17 +27,132 @@ public class Burcu {
                 break;
             case 2:
                 if(day>=1 && day<=28){
-                    if(day<2){
-                        burcu="Oglak";
-                    }else{
+                    if(day<20){
                         burcu="Kova";
+                    }else{
+                        burcu="Balik";
                     }
                 }else{
                     isError = true;
                 }
                 break;
+            case 3 :
+                if (day>=1 && day<=31){
+                    if (day<20){
+                        burcu="Balik";
+                    }else{
+                        burcu="koc";
+                    }
+                }else{
+                    isError=true;
+                }
+                break;
+            case 4 :
+                if (day>=1 && day<=31){
+                    if (day<20){
+                        burcu="Koc";
+                    }else{
+                        burcu="Boga";
+                    }
+                }else{
+                    isError=true;
+                }
+                break;
+            case 5 :
+                if (day>=1 && day<=31){
+                    if (day<22){
+                        burcu="Boga";
+                    }else{
+                        burcu="ikizler";
+                    }
+                }else{
+                    isError=true;
+                }
+                break;
+            case 6 :
+                if (day>=1 && day<=31){
+                    if (day<23){
+                        burcu="ikizler";
+                    }else{
+                        burcu="Yengec";
+                    }
+                }else{
+                    isError=true;
+                }
+                break;
+            case 7 :
+                if (day>=1 && day<=31){
+                    if (day<23){
+                        burcu="Yengec";
+                    }else{
+                        burcu="Aslan";
+                    }
+                }else{
+                    isError=true;
+                }
+                break;
+            case 8 :
+                if (day>=1 && day<=31){
+                    if (day<23){
+                        burcu="Aslan";
+                    }else{
+                        burcu="Basak";
+                    }
+                }else{
+                    isError=true;
+                }
+                break;
+            case 9 :
+                if (day>=1 && day<=31){
+                    if (day<23){
+                        burcu="Basak";
+                    }else{
+                        burcu="Tersazi";
+                    }
+                }else{
+                    isError=true;
+                }
+                break;
+            case 10 :
+                if (day>=1 && day<=31){
+                    if (day<23){
+                        burcu="Terazi";
+                    }else{
+                        burcu="Akrep";
+                    }
+                }else{
+                    isError=true;
+                }
+                break;
+            case 11 :
+                if (day>=1 && day<=31){
+                    if (day<22){
+                        burcu="Akrep";
+                    }else{
+                        burcu="Yay";
+                    }
+                }else{
+                    isError=true;
+                }
+                break;
+            case 12 :
+                if (day>=1 && day<=31){
+                    if (day<20){
+                        burcu="Yay";
+                    }else{
+                        burcu="Oglak";
+                    }
+                }else{
+                    isError=true;
+                }
+                break;
             default:
-                System.out.println("Hatali bir ay girdiniz !");
+                isError=true;
+        }
+        if (isError){
+            System.out.println("Hatali giris yaptiniz: ");
+        }else{
+            System.out.println("Burcunuz : "+ burcu);
         }
     }
 }
