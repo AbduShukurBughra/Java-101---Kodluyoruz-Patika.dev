@@ -2,16 +2,21 @@ import java.util.Scanner;
 
 public class FindEvenNumbersUpToTheEnteredNumber {
     public static void main(String[] args) {
-        int k;
-        Scanner input=new Scanner(System.in);
 
-        System.out.println("Sayi Giriniz : ");
-        k=input.nextInt();
+        Scanner input = new Scanner(System.in);
+        int enteredNumber = 0, sum = 0, validNumber = 0;
+        double avg;
 
-        for (int i = 1; i<k; i++){
-            if (i%2==0){
-                System.out.println(i);
+        System.out.println("Please Enter an Integer Number : ");
+        enteredNumber = input.nextInt();
+        for (int i = 0; i <= enteredNumber; i++){
+            if(i % 3 == 0 && i % 4 == 0){
+                sum += i;
+                validNumber ++;
             }
         }
+        avg = sum / (validNumber );
+        System.out.println("Average: " + avg );
+        input.close();
     }
 }
