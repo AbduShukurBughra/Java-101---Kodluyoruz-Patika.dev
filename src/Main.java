@@ -1,41 +1,38 @@
-import java.util.Scanner;
+import java.util.*;
 
 class Main {
 
-    int CountingMinutes(String str) {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String line = "Hello World";
 
-        String[] horas = str.split("-");
-        int minutosIniciais = geraMinutos(horas[0]);
-        int minutosFinais = geraMinutos(horas[1]);
-        int resposta = 0;
-        if (minutosIniciais < minutosFinais) {
-            resposta = minutosFinais - minutosIniciais;
+        int vowels = 0, consonants = 0, digits = 0, spaces = 0;
+
+        line = line.toLowerCase();
+        for (int i = 0; i < line.length(); ++i) {
+            char ch = line.charAt(i);
+
+            // check if character is any of a, e, i, o, u
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                ++vowels;
+            }
+
+            // check if character is in between a to z
+            else if ((ch >= 'a' && ch <= 'z')) {
+                ++consonants;
+            }
+
+            // check if character is in between 0 to 9
+            else if (ch >= '0' && ch <= '9') {
+                ++digits;
+            }
+
+            // check if character is a white space
+            else if (ch == ' ') {
+                ++spaces;
+            }
         }
-        else {
-            resposta = (24*60) - minutosIniciais + minutosFinais;
-        }
-        return resposta;
+        System.out.println(consonants);
 
-    }
-    int geraMinutos(String tempo) {
-        int minutos = 0;
-
-        String[] horaMinuto = tempo.split(":");
-        if (horaMinuto[1].endsWith("am")) {
-            minutos += 60 * Integer.parseInt(horaMinuto[0]);
-        }
-        else {
-            minutos += (60 * 12) + 60 * Integer.parseInt(horaMinuto[0]);
-        }
-        minutos += Integer.parseInt(horaMinuto[1].substring(0,2));
-
-        return minutos;
-    }
-
-    public static void main (String[] args) {
-        // keep this function call here
-        Scanner s = new Scanner(System.in);
-        Main c = new Main();
-        System.out.print(c.CountingMinutes(s.nextLine()));
     }
 }
