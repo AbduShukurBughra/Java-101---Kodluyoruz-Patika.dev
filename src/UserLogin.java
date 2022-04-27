@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class UserLogin {
     public static void main(String[] args) {
-        String userName, password;
+        String userName;
+        String password;
 
         Scanner input= new Scanner(System.in);
         System.out.println("Kullanici Adiniz : ");
